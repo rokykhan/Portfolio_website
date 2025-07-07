@@ -1,0 +1,123 @@
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+:root{
+    --primary-color: #4458dc;
+    --primary-color2: #854fee;
+    --title-color: #141313;
+    --text-color: #777777;   
+    --border-color: #201f1f17;   
+    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+    
+
+    /* font family variables. */  
+    --roboto: 'Roboto', cursive ;
+} 
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+     width: 100%;
+    height: 100%;
+}
+
+/* header start   */
+
+.nav-item{
+    padding: 20px;
+}
+.nav-item a{
+    padding: 0;
+}
+.nav-item .nav-link { 
+   font: normal 500 15px/20px var(--roboto);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--title-color);
+    transition: all 0.3s ease; 
+}
+
+
+.nav-item .nav-link.active {
+    background: var(--gradient-color); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.nav-item .nav-link:hover {
+    background: var(--gradient-color); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+} 
+
+
+/* header end   */
+
+/* banner start  */
+.titeltop{
+    padding-top: 230px;
+    font: normal bold 50px / 72px var(--roboto);
+}
+.titeltop::after {
+    content: " ";
+    height: 3px;
+    width: 18vw;
+    background: black;
+    display: inline-block;
+    margin-left: 30px;
+    transform: translateY(-10px);
+}
+.title{
+    font: normal bold 75px / 70px var(--roboto);
+}
+.subtitel{
+    font: normal bold 40px / 70px var(--roboto);
+}
+.banner-btn{
+    background: var(--gradient-color);
+    background-clip: padding-box;
+    color: whitesmoke;
+    transition: background .6s ease;
+    box-shadow: var(--box-shadow);
+    padding: 12px 35px;
+    font: normal 500 16px / 20px var(--roboto);
+    border: 3px solid transparent;
+    border-radius: 4px;
+    position: relative;
+}
+
+.banner-btn::after,{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background: var(--gradient-color);
+    content: ' ';
+    z-index: -1;
+    border-radius: 4px;
+
+}
+.banner-btn:hover{
+    background: whitesmoke;
+    background-clip: padding-box;
+    color: black;
+}
+.btncv{
+    background: white;
+    background-clip: padding-box;
+    transition: background .6s ease;
+    border: 5px solid var(--gradient-color);
+
+}
+.btncv:hover{
+    background: var(--gradient-color);
+    color: white
+    box-shadow: var(--box-shadow);
+}
